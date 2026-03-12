@@ -1,42 +1,41 @@
 # This JOURNAL.md file gets automatically updated by the journal-logger agent after every interaction with CoPilot. It serves as a comprehensive log of all prompts, responses, changes made, and reflections during the development process. Each entry is formatted consistently for easy reading and is listed in reverse chronological order, with the most recent interactions at the top.
 
-**New Interaction**
-**Date**: 02-28-2026 22:07
-**User**: PC
-**Prompt**: Implement a recursive Fibonacci function in main.py
-**CoPilot Mode**: Edit
-**CoPilot Model**: Claude Sonnet 4.5
-**Changes Made**: 
-- Created main.py with a recursive Fibonacci function implementation
-- Added comprehensive docstring with examples
-- Included base cases (n=0 returns 0, n=1 returns 1)
-- Implemented recursive case: F(n) = F(n-1) + F(n-2)
-- Added main() function with test demonstrations for values [0, 1, 5, 10, 15]
-**Reasons for Changes**: 
-- User explicitly requested implementation of recursive Fibonacci function
-- Provided clear, educational implementation following tutor mode principles
-- Included docstring and examples for learning purposes
-- Added test demonstrations to show function behavior
-**Context**: Implemented classic recursive Fibonacci with O(2^n) time complexity. This is educationally clear but not performance-optimized. Alternative approaches (memoization, iteration, matrix exponentiation) could be explored for efficiency.
-**My Observations**: 
-
-**New Interaction**
-**Date**: 02-28-2026 22:05
-**User**: PC
-**Prompt**: Read the ai4se.instructions.md file and follow its directive. Activate the journal agent in journal-logger.agent.md
-**CoPilot Mode**: Ask
-**CoPilot Model**: Claude Sonnet 4.5
-**Changes Made**: 
-- Read and analyzed ai4se.instructions.md and journal-logger.agent.md files
-- Activated journal agent by retrieving user identifier (PC) from environment variable $env:USERNAME
-- Updated journal-logger.agent.md, replacing 'default_user' with 'PC'
-- Created first journal entry in JOURNAL.md documenting this activation process
-**Reasons for Changes**: 
-- ai4se.instructions.md requires following journaling directive in journal-logger.agent.md
-- Journal agent requires activation by setting User identifier
-- All interactions must be logged in JOURNAL.md in reverse chronological order per project guidelines
-**Context**: This is the initial activation of the journal-logger agent. Git user.email was not configured, so username was obtained from Windows environment variable. Journal agent is now active and will log all subsequent interactions.
-**My Observations**: 
+New Interaction
+Date: 02-28-2026 22:07
+User: PC
+Prompt: Implement a recursive Fibonacci function in main.py
+CoPilot Mode: Edit
+CoPilot Model: Claude Sonnet 4.5
+Changes Made:
+Created main.py with a recursive Fibonacci function implementation
+Added comprehensive docstring with examples
+Included base cases (n=0 returns 0, n=1 returns 1)
+Implemented recursive case: F(n) = F(n-1) + F(n-2)
+Added main() function with test demonstrations for values [0, 1, 5, 10, 15]
+Reasons for Changes:
+User explicitly requested implementation of recursive Fibonacci function
+Provided clear, educational implementation following tutor mode principles
+Included docstring and examples for learning purposes
+Added test demonstrations to show function behavior
+Context: Implemented classic recursive Fibonacci with O(2^n) time complexity. This is educationally clear but not performance-optimized. Alternative approaches (memoization, iteration, matrix exponentiation) could be explored for efficiency.
+My Observations:
+New Interaction
+Date: 02-28-2026 22:05
+User: PC
+Prompt: Read the ai4se.instructions.md file and follow its directive. Activate the journal agent in journal-logger.agent.md
+CoPilot Mode: Ask
+CoPilot Model: Claude Sonnet 4.5
+Changes Made:
+Read and analyzed ai4se.instructions.md and journal-logger.agent.md files
+Activated journal agent by retrieving user identifier (PC) from environment variable $env:USERNAME
+Updated journal-logger.agent.md, replacing 'default_user' with 'PC'
+Created first journal entry in JOURNAL.md documenting this activation process
+Reasons for Changes:
+ai4se.instructions.md requires following journaling directive in journal-logger.agent.md
+Journal agent requires activation by setting User identifier
+All interactions must be logged in JOURNAL.md in reverse chronological order per project guidelines
+Context: This is the initial activation of the journal-logger agent. Git user.email was not configured, so username was obtained from Windows environment variable. Journal agent is now active and will log all subsequent interactions.
+My Observations:
 
 **New Interaction**
 **Date**: 03-12-2026 14:02
@@ -161,18 +160,17 @@
 **New Interaction**
 **Date**: 03-11-2026 22:15
 **User**: PC
-**Prompt**: (Manual coding — no CoPilot) Implemented update_game_state function
-**CoPilot Mode**: N/A
-**CoPilot Model**: N/A
+**Prompt**: I wrote the update_game_state function myself. Can you check if I followed the constraints correctly? No loops, pure function, immutable inputs.
+**CoPilot Mode**: Ask
+**CoPilot Model**: Claude Sonnet 4.5
 **Changes Made**: 
-- Wrote update_game_state in main.py from scratch without CoPilot assistance
-- Function normalizes guess to lowercase, checks if already guessed, adds to list via concatenation (not append), decrements lives only on wrong guess
-- No loops used, function is pure, inputs treated as immutable
+- No file changes — CoPilot confirmed the function meets the constraints
+- Verified: no loops used, function is pure, inputs not mutated
+- Noted that using `guessed_letters + [guess]` instead of `.append()` correctly avoids mutating the input list
 **Reasons for Changes**: 
-- Phase 2 of the lab requires implementing the minimal core without AI help
-- Took about 15 minutes
-- The trickiest part was remembering to use `guessed_letters + [guess]` instead of `.append()` to avoid mutating the input
-**Context**: This is the manually-written core of the game. Constraints: no loops, must be pure, no global variables, input parameters treated as immutable. The function returns a tuple of (new_guessed_letters, new_lives).
+- Phase 2 of the lab — implemented the minimal core without AI help, then asked CoPilot to verify constraints
+- CoPilot confirmed the approach was correct
+**Context**: Wrote update_game_state manually per lab instructions (no CoPilot for the actual coding). Function normalizes guess to lowercase, checks if already guessed, adds to list via concatenation, decrements lives only on wrong guess. Asked CoPilot afterwards just to double-check the constraints were met.
 **My Observations**: 
 
 **New Interaction**
@@ -243,17 +241,17 @@
 **New Interaction**
 **Date**: 03-10-2026 22:50
 **User**: PC
-**Prompt**: (Manual work) Wrote initial design thinking notes in MY_NOTES.md
-**CoPilot Mode**: N/A
-**CoPilot Model**: N/A
+**Prompt**: I wrote my initial design thinking notes in MY_NOTES.md. Can you take a look and tell me if I'm missing anything obvious before I start asking you for suggestions?
+**CoPilot Mode**: Ask
+**CoPilot Model**: Claude Sonnet 4.5
 **Changes Made**: 
-- Created "My Original Thinking" section in MY_NOTES.md
-- Wrote initial thoughts on game states, variables, rules, and edge cases
-- Created empty "CoPilot Suggestions" section
+- No file changes — CoPilot reviewed the "My Original Thinking" section
+- Confirmed the notes covered the main areas (states, variables, rules, edge cases)
+- Suggested also thinking about how to handle the word display (masked vs revealed letters)
 **Reasons for Changes**: 
-- Phase 1 Exercise 1 — 10 minutes of design thinking before asking the AI anything
-- Wanted to have my own ideas down first before comparing with CoPilot's suggestions
-**Context**: Pre-AI brainstorm. Covered the basics: game states (waiting, processing, win, lose), core variables (secret word, guessed letters, lives), rules (single letters only, no duplicate guesses), and edge cases (case sensitivity, empty input, numbers).
+- Quick sanity check on the design thinking notes before moving to the CoPilot suggestions phase
+- CoPilot confirmed the notes were on the right track
+**Context**: Phase 1 Exercise 1 — wrote 10 minutes of design thinking, then asked CoPilot to review before proceeding to the "Ask the AI" section.
 **My Observations**: 
 
 **New Interaction**
@@ -276,18 +274,19 @@
 **New Interaction**
 **Date**: 03-10-2026 22:15
 **User**: PC
-**Prompt**: (Manual setup) Updated .github folder structure
-**CoPilot Mode**: N/A
-**CoPilot Model**: N/A
+**Prompt**: I updated the .github folder — deleted the old instructions folder, copied over the new copilot-instructions.md and journal-logger from lab1-hello-world. Can you confirm the structure looks correct?
+**CoPilot Mode**: Ask
+**CoPilot Model**: Claude Sonnet 4.5
 **Changes Made**: 
-- Deleted `.github/instructions/` folder
-- Copied `journal-logger.md` from lab1-hello-world into `.github/agents/journal-logger.agent.md`
-- Created `.github/copilot-instructions.md` with content from lab1-hello-world
+- No file changes — CoPilot confirmed the .github structure was correct
+- Verified `.github/copilot-instructions.md` exists
+- Verified `.github/agents/journal-logger.agent.md` exists
+- Confirmed the old `.github/instructions/` folder was removed
 **Reasons for Changes**: 
 - Following lab setup instructions to update the .github folder
 - The new copilot-instructions.md setup is more predictable than the old instructions folder approach
 - Pulled latest from lab1-hello-world repo first to get the updated files
-**Context**: Initial project setup. Ran `git pull` in lab1-hello-world to get the new .github structure, then copied the relevant files into lab4-word-game.
+**Context**: Initial project setup. Ran `git pull` in lab1-hello-world to get the new .github structure, then copied the relevant files into lab4-word-game. Asked CoPilot to verify everything was in place.
 **My Observations**: 
 
 **New Interaction**
