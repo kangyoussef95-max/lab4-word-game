@@ -17,6 +17,7 @@ WORDS = [
 # Game Logic (Pure Functions — No I/O, No Side Effects)
 # ============================================================
 
+
 def select_random_word(word_list: list[str]) -> str:
     """Select a random word from the provided word list."""
     return random.choice(word_list)
@@ -187,7 +188,15 @@ def main() -> None:
     print("  Thanks for playing! Goodbye.")
     
 
-
+def AutoMode() :
+    ch = int(input("Please choose the game mode by typing 1 or 2 : \n1. Manual Mode. \n2. Auto Mode. "))
+    if ch == 1 : 
+        return None
+    elif ch == 2 :
+        return True
+    else :
+        print("Invalid Number. Please type  or 2.")
+         
 
 if __name__ == "__main__":
     main()

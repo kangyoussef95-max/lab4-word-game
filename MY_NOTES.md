@@ -63,3 +63,13 @@
 - **Empty word list**: calling random.choice on an empty list crashes
 - **Non-letter input not caught**: numbers, symbols, empty strings slipping through
 - **Mutating shared state**: if guessed_letters is passed by reference and mutated inside a function, the caller's list changes too — need to be careful with immutability
+
+-------------------------------------
+
+# AUTO PLAY MODE ASSIGNEMENT
+
+**Initial Analysis**: I will need to implement a function that is executed before the game begins and that asks the user to choose between an AUTO and Maanual mode and if they choose the AUTO mode then it makes the computer play the game against itself.
+
+**Design Decisions**: -A function with three possible cases.
+
+**Questions**: -
