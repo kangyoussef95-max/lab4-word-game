@@ -1,12 +1,3 @@
-"""
-Guess The Word Game (Hangman)
-A console-based word guessing game where the player tries to guess a secret word
-by suggesting letters within a limited number of attempts.
-
-Logic and UI are separated: game logic functions are pure and stateless,
-while UI functions handle all input/output.
-"""
-
 import random
 
 
@@ -35,22 +26,7 @@ def update_game_state(secret_word: str,
                       guessed_letters: list[str],
                       guess: str,
                       lives: int) -> tuple[list[str], int]:
-    """
-    Process a new guess and return updated game state.
 
-    Takes the current game state and a new guess letter, returns a new
-    list of guessed letters and updated life count. Does not mutate any
-    input parameters.
-
-    Args:
-        secret_word: The word the player is trying to guess.
-        guessed_letters: Previously guessed letters.
-        guess: The new single-letter guess.
-        lives: Current remaining lives.
-
-    Returns:
-        A tuple of (new_guessed_letters, new_lives).
-    """
     normalized_guess = guess.lower()
 
     # If already guessed, return state unchanged
@@ -209,6 +185,8 @@ def main() -> None:
             break
         playing = play_round(WORDS)
     print("  Thanks for playing! Goodbye.")
+    
+
 
 
 if __name__ == "__main__":

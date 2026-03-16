@@ -1,7 +1,7 @@
 # My Original Thinking
 
 ## Game States
-- **Waiting for input**: the game is idle, waiting for the player to type a letter
+- **Waiting for input: the game is idle, waiting for the player to type a letter
 - **Processing guess**: the game checks if the letter is in the word
 - **Win state**: all letters have been revealed
 - **Lose state**: player ran out of lives
